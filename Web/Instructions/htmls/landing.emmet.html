@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Components</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+ <nav class="navbar navbar-default">
+   <div class="container-fluid">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+     </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">  
+     <ul class="nav navbar-nav navbar-right"> 
+      <li class="active">
+      
+       <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots
+         <span class="caret"></span>
+         </a>
+         <ul class="dropdown-menu">
+             <ul>
+                 <li><a href="max-temp.html">Max Temperature</a></li>
+                 <li><a href="humidity.html">Humidity</a></li>
+                 <li><a href="cloudiness.htnl">Cloudiness</a></li>
+                 <li><a href="wind-speed">Wind Speed</a></li>
+             </ul>
+         </ul>
+         </li>
+       <li><a href="comparisons.emmet.html">Comparison</a></li>
+       <li><a href="">Data</a></li>
+      </ul>
+    </div>
+   </div>
+ </nav>     
+<!--Creating body-->
+     <div class="container">
+      
+       <div class="row">
+         <div class="col-md-7">
+           <div class="main-box">
+               <h1 class="Summary-left">Summary: Latitude vs. X</h1>
+           </div>
+           <hr>
+           <div class="caption">
+             <img src="../Resources/assets/images/Fig1.png" alt="temp vs lat">
+             <p class="explanation">
+             The purpose of this project is to analyze how weather changes as you get closer to the equator.
+             To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a 
+             dataset on over 500 cities.
+             
+             After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.
+             Factors we looked at included: temperature, coludiness, wind speed, and humidity. This site provides 
+             the source data and visualization created as part of the analysis, as well as explanations and 
+             descriptions of any trends and correlations witnessed.
+             </p>
+           </div>
+         </div>
+          
+         <div class="col-md-4">
+           <div class="side-box">
+            <h3 class="Summary-right">Visualizations</h3>
+            <hr>
+              <div class="row">
+                <div class="col-sm-2"><a href="max-temp.html"><img id="side-img1" src="../Resources/assets/images/Fig1.png" alt="temp vs lat"></a></div>
+                <div class="col-sm-2"><a href="humidity.html"><img id="side-img2" src="../Resources/assets/images/Fig2.png" alt="img2"></a></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-2"><a href="cloudiness.htnl"><img id="side-img3" src="../Resources/assets/images/Fig3.png" alt="img3"></a></div>
+                <div class="col-sm-2"><a href="wind-speed"><img id="side-img4" src="../Resources/assets/images/Fig4.png" alt="img4"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class='footer'>
+            
+        </div>
+        
+        
+      </div>
+
+</body>
+
+</html>
