@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Demo</title>
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+<div class="container-fluid">
+<!-- BEGIN NAVBAR  -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Home</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Landing <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="comparison.html">Comparisons</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="data.html">Data</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Plots
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+          <a class="dropdown-item" href="humidity.html">Humidity</a>
+		  <a class="dropdown-item" href="temp.html">Temperature</a>
+		  <a class="dropdown-item" href="wind_speed.html">Wind Speed</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- END NAVBAR -->
+
+<h1> Latitude vs. X </h1>
+<hr>
+<div class="row">
+	<div class="col-md-6"> 
+		<img src="lat_vs_cloudiness.png" alt="Cloudiness">
+	</div>
+	<div class="col-md-6">
+		<p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+	</div>
+	<div class="col-md-4">
+		<p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+	</div>
+</div>
+<h3>Visualizations</h3>
+<hr>
+<div class="row">
+	<div class="col-md-6">
+		<a href="cloudiness.html"><img src="lat_vs_cloudiness.png" alt="Cloudiness"></a>
+	</div>
+	<div class="col-md-6">
+		<a href="humidity.html"><img src="lat_vs_humidity.png" alt="Humidity"></a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<a href="temp.html"><img src="lat_vs_temp.png" alt="Temperature"></a>
+	</div>
+	<div class="col-md-6">
+		<a href="wind_speed.html"><img src="lat_vs_wind_speed.png" alt="Wind Speed"></a>
+	</div>
+</div>
+<!--
+The website must consist of 7 pages total, including:
+
+* A [landing page](#landing-page) containing:
+  * An explanation of the project.
+  * Links to each visualizations page.
+* Four [visualization pages](#visualization-pages), each with:
+  * A descriptive title and heading tag.
+  * The plot/visualization itself for the selected comparison.
+  * A paragraph describing the plot and its significance.
+* A ["Comparisons" page](#comparisons-page) that:
+  * Contains all of the visualizations on the same page so we can easily visually compare them.
+  * Uses a bootstrap grid for the visualizations.
+    * The grid must be two visualizations across on screens medium and larger, and 1 across on extra-small and small screens.
+* A ["Data" page](#data-page) that:
+  * Displays a responsive table containing the data used in the visualizations.
+    * The table must be a bootstrap table component.
+    * The data must come from exporting the `.csv` file as HTML, or converting it to HTML. You may use a csv-to-html table conversion tool, e.g. [ConvertCSV](http://www.convertcsv.com/csv-to-html.htm).
+
+The website must, at the top of every page, have a navigation menu that:
+
+* Has the name of the site on the left of the nav which allows users to return to the landing page from any page.
+* Contains a dropdown on the right of the navbar named "Plots" which provides links to each individual visualization page.
+* Provides two more links on the right: "Comparisons" which links to the comparisons page, and "Data" which links to the data page.
+* Is responsive (using media queries). The nav must have similar behavior as the screenshots ["Navigation Menu" section](#navigation-menu) (notice the background color change).
+-->
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
