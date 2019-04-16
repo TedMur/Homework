@@ -2,17 +2,26 @@
     margin: auto;
 }
 
-#featured-image {
-    height: 100px;
-    width: 150px;
+#btn {
+    height: 50px;
+    padding-top: 8px;
+    font-size: 150%;
 }
 
-.hemisphere {
+
+
+#featured-image {
     height: 500px;
-    width: 500px;
+    width: 700px;
 }
+
+
+
 
 #border {
     border-style: solid
 }
+
+
+
 
