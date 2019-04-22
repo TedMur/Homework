@@ -1,134 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <!-- <link rel="icon" type="image" href="https://pngimg.com/uploads/mars_planet/mars_planet_PNG13.png"> -->
         <title>Mission to Mars</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-        <link href="style.css" rel="stylesheet" type="text/css">
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
     </head>
-    <body>    
+
+    <body>
         <div class="container">
-            <div class="row text-center">
-                <div class="jumbotron" id="headder">
-                    <h1>Mission to Mars</h1><br>
-                    <a class="btn btn-primary" id="btn">Scrape New Data</a>
-                </div>
+
+            <!-- Jumbotron -->
+            <div class="jumbotron text-center" style="background-image: url(https://cdn.theatlantic.com/static/mt/assets/science/0831Pic.jpg); background-size: 100%; height: 100%;">
+                <h1 class="display-4 text-white">Mission to Mars</h1>
+                <a class="btn btn-lg text-white" style="background-color:#c1440e;" href="/scrape" role="button">Scrape New
+                    Data</a>
             </div>
 
-            <div class="row">
-                <h2>Latest Mars News</h2>
-                <h3>NASA Garners 7 Webby Award Nominations</h3>
+            <!-- News Section -->
+            <div class="container">
+                <h3>Latest Mars News</h3>
+                <h6>NASA Garners 7 Webby Award Nominations</h6>
                 <p>Nominees include four JPL projects: the solar system and climate websites, InSight social media, and a 360-degree Earth video. Public voting closes April 18, 2019.</p>
             </div>
-            <div class='row middle_content'>
-                <div class="col-md-8">
-                    <h2>Featured Mars Image</h2>
-                    <img src="../../Resources/featured.jpg" alt="featured Image" id="featured-image">
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <h3>Current Weather on Mars</h3>
-                        <p id="weather-mars">sol 132 (2019-04-10) low -97.7ºC (-143.8ºF) high -16.3ºC (2.7ºF)
-                            winds from the SW at 4.3 m/s (9.5 mph) gusting to 12.2 m/s (27.3 mph)
-                            pressure at 7.30 hPapic.twitter.com/lW713h6MMh</p>
-                    </div>
-                    <div class="row">   
-                        <h3>Mars Facts</h3>
-                        <table border="1" class="dataframe">   
-                            <thead>
-                                <tr style="text-align: right;">       
-                                    <th></th>       
-                                    <th>Values</th>     
-                                </tr>     
-                                <tr>       
-                                    <th>Index</th>       
-                                    <th></th>    
-                                </tr>   
-                            </thead>   
-                            <tbody>     
-                                <tr>       
-                                    <th>Equatorial Diameter:</th>       
-                                    <td>6,792 km</td>     
-                                </tr>     
-                                <tr>       
-                                    <th>Polar Diameter:</th>       
-                                    <td>6,752 km</td>     
-                                </tr>     
-                                <tr>       
-                                    <th>Mass:</th>       
-                                    <td>6.42 x 10^23 kg (10.7% Earth)</td>     
-                                </tr>     
-                                <tr>       
-                                    <th>Moons:</th>       
-                                    <td>2 (Phobos &amp; Deimos)</td>     
-                                </tr>     
-                                <tr>
-                                    <th>Orbit Distance:</th>       
-                                    <td>227,943,824 km (1.52 AU)</td>     
-                                </tr>     
-                                <tr>       
-                                    <th>Orbit Period:</th>       
-                                    <td>687 days (1.9 years)</td>     
-                                </tr>     
-                                <tr>       
-                                    <th>Surface Temperature:</th>       
-                                    <td>-153 to 20 °C</td>     
-                                </tr>     
-                                <tr>       
-                                    <th>First Record:</th>       
-                                    <td>2nd millennium BC</td>     
-                                </tr>     
-                                <tr>       
-                                    <th>Recorded By:</th>       
-                                    <td>Egyptian astronomers</td>    
-                                </tr>   
-                            </tbody> 
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <h3>Mars Hemispheres</h3>
-                <hr>
-            </div>  
 
-            <div class="row" id=hemisphere>
-               <div class="column" id="border">
-                    <img src="../Resources/Cerberus%20hemisphere.jpg" class="col-md-6" id="img">
-                    <p>Cerberus Hemisphere Enhanced</p>
-            
-                </div>
-                <div class="column" id="border">
-                    <img src="../Resources/Schiaparelli%20hemisphere.jpg" class="col-md-6" id="img">
-                        <p>Schiaparelli Hemisphere Enhanced</p>
-            
-                </div>
-                
-                    <div class="col-sm-6"><img src="../Resources/Syrtis%20Major%20hemisphere.jpg" class="col-md-6" id="img"></div>
-                    <p>Syrtis Major Hemisphere Enhanced</p>
-                    <div class="col-sm-6"><img src="../Resources/Valles%20Marineris%20hemisphere.jpg" class="col-md-6" id="img"></div>
-                    <p>Valles Marineris Hemisphere Enhanced</p>
+            <div class="container">
+                <div class="row">
+                    <!-- Left Image-->
+                    <div class="col-lg-8 col-md-8 col-sm-12">
+                        <h3>Featured Mars Image</h3>
+                        <img src="../Images/PIA23140_hires.jpg" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+                    </div>
+
+                    <!-- Weather Card -->
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+
+                        <div class="card" >
+                            <div class="card-body text-white bg-dark">
+                                <h6 class="card-title">Current Weather on Mars</h6>
+                                <p class="card-text">sol 138 (2019-04-17) low -97.7ºC (-143.9ºF) high -17.3ºC (0.9ºF) winds from the W at 4.3 m/s (9.5 mph) gusting to 12.6 m/s (28.1 mph) pressure at 7.30</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Table -->
+                        <br>
+                        <h3>Mars Facts</h3>
+                        <div style="max-width: 450px; max-height: 150px; font-size: 15px; margin-bottom: 65px;">
+                            <table border="1" class="dataframe">
+                                <thead><tr style="text-align: right;">
+                                    <th></th><th>Values</th></tr>
+                                    <tr>
+                                        <th>Index</th><th></th>
+                                    </tr>   
+                                </thead>   
+                                <tbody>     
+                                    <tr>
+                                        <th>Equatorial Diameter:</th>
+                                        <td>6,792 km</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Polar Diameter:</th>
+                                        <td>6,752 km</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Mass:</th>
+                                        <td>6.42 x 10^23 kg (10.7% Earth)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Moons:</th>
+                                        <td>2 (Phobos &amp; Deimos)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Orbit Distance:</th>
+                                        <td>227,943,824 km (1.52 AU)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Orbit Period:</th>
+                                        <td>687 days (1.9 years)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Surface Temperature:</th>
+                                        <td>-153 to 20 °C</td>
+                                    </tr>
+                                    <tr>
+                                        <th>First Record:</th>
+                                        <td>2nd millennium BC</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Recorded By:</th>
+                                        <td>Egyptian astronomers</td>
+                                    </tr>
+                                </tbody> 
+                            </table>
+                        </div>
+                    </div> <!-- col4 -->
+                </div><!-- Row -->
+            </div><!-- Container -->
+
+            <!-- Cards -->
+            <h3 style="padding-top: 50px; margin-top: 100px; text-align: center;">Mars Hemispheres</h3>
+            <div class="card-deck">
+                <hr>
+                <div class="col-md-12">
+                    <div class="row">
+
+
+                    </div>
                 </div>
             </div>
 
         </div>
+        </div>
+    </div><!-- Close main container -->
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </body>
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
