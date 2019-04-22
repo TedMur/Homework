@@ -1,12 +1,12 @@
-import time
-import pandas as pd
-from bs4 import BeautifulSoup as bs
-import shutil
-import requests
+# Dependencies
 from splinter import Browser
+from bs4 import BeautifulSoup
+import pandas as pd
+from pprint import pprint
+from time import sleep
 
 def scrape():
-    
+
     # headless=True here when running app
 
     # This is to initialize Splinter for Mac users...look below for instructions for Windows users
@@ -39,7 +39,7 @@ def mars_news(browser):
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
     html = browser.html
-    mars_news_soup = bs(html, 'html.parser')
+    mars_news_soup = BeautifulSoup(html, 'html.parser')
 
     # Scrape the first article title and teaser paragraph text; return them
     first_title = mars_news_soup.find('div', class_='content_title').text
@@ -56,7 +56,7 @@ def jpl_image(browser):
     browser.click_link_by_partial_text('more info')
 
     html = browser.html
-    image_soup = bs(html, 'html.parser')
+    image_soup = BeautifulSoup(html, 'html.parser')
 
     # Scrape the URL and return
     feat_img_url = image_soup.find('figure', class_='lede').a['href']
@@ -67,7 +67,7 @@ def mars_weather_tweet(browser):
     url = 'https://twitter.com/marswxreport?lang=en'
     browser.visit(url)
     html = browser.html
-    tweet_soup = bs(html, 'html.parser')
+    tweet_soup = BeautifulSoup(html, 'html.parser')
     
     # Scrape the tweet info and return
     first_tweet = tweet_soup.find('p', class_='TweetTextSize').text
@@ -89,7 +89,7 @@ def mars_hemis(browser):
     browser.visit(url)
     
     html = browser.html
-    hemi_soup = bs(html, 'html.parser')
+    hemi_soup = BeautifulSoup(html, 'html.parser')
 
     hemi_strings = []
     links = hemi_soup.find_all('h3')
@@ -116,6 +116,9 @@ def mars_hemis(browser):
         
         # Add the dictionary to hemisphere_image_urls
         hemisphere_image_urls.append(hemi_dict)
+    
+        # Check for output
+        pprint(hemisphere_image_urls)
     
         # Click the 'Back' button
         browser.click_link_by_partial_text('Back')
