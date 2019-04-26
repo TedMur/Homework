@@ -26,45 +26,23 @@ function displayData(data){
 
 displayData(tableData)
 
+//select the web user's input and the filter button
+var filterBtn = d3.select("#filter-btn");
+var inputText = d3.select("#datetime");
 
-
-
-
-
-// Select the submit button
-//var submit = d3.select("submit")
-//submit.on("click", function(){
-//    
-//    // Select the input element and get the raw HTML node
-//    var inputElement = d3.select("input");
-//    
-//    // Get the value property of the input element
-//    var inputValue = inputElement.property("value");
-//    
-//    console.log(inputValue);
-//    console.log(tableData);   
+// filter data with date that the user inputs
+function clickSelect() {
     
-//    var filterData = tableData.filter(tData => tableData.datetime === inputValue);
-//    
-//    console.log(filterData);
-////    
-//    var date = filterData.map(tData => tData.time)
-//    
-//    var datetime:,
-//    var city:,
-//    var state:,
-//    var country:,
-//    var shape:,
-//    var durationMinutes:,
-//    var comments:, 
-//    
-//    
-//    d3.select("")
-//      .append("td").text(`${datetime}`)
-//      .append("td").text(`${city}`)
-//      .append("td").text(`${state}`)
-//      .append("td").text(`${country}`)
-//      .append("td").text(`${shape}`)
-//      .append("td").text(`${durationMinutes}`)
-//      .append("td").text(`${comments}`);   
-//})
+    //don't refresh the page!
+    d3.event.preventDefault();
+    
+    //print the value that was input
+    console.log(inputText.property("value"));
+    
+    //create a new table showing only the filterd data
+    var newTable = tableData.filter(sighting => sighting.datetime === inputText.property("value"));
+    
+    //display the new table
+    displayData(newTable);
+    inputText.on("change", clickSelect)
+}
