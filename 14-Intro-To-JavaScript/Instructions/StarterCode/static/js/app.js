@@ -20,15 +20,15 @@ function displayData(data){
     data.forEach(function(sighting){
     new_tr = tbody.append("tr")
     Object.entries(sighting).forEach(function([key, value]){
-        new_td = new_tr.append("td").text(value)	
+    new_td = new_tr.append("td").text(value)	
     })
 })};
 
 displayData(tableData)
 
 //select the web user's input and the filter button
-var filterBtn = d3.select("#filter-btn");
-var inputText = d3.select("#datetime");
+var dateInputText = d3.select("#datetime");
+var button = d3.select("#filter-btn");
 
 // filter data with date that the user inputs
 function clickSelect() {
@@ -37,12 +37,14 @@ function clickSelect() {
     d3.event.preventDefault();
     
     //print the value that was input
-    console.log(inputText.property("value"));
+    console.log(dateInputText.property("value"));
     
     //create a new table showing only the filterd data
-    var newTable = tableData.filter(sighting => sighting.datetime === inputText.property("value"));
+    var newTable = tableData.filter(sighting => sighting.datetime === dateInputText.property("value"));
     
     //display the new table
     displayData(newTable);
-    inputText.on("change", clickSelect)
 }
+    button.on("change", clickSelect)
+
+
